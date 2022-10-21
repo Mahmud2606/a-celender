@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #009999;
+}
+.wraper{
+    width: 450px;
+    background: #003333;
+    border-radius: 6px;
+}
+.wraper .clock{
+    text-align: center;
+    color: #1d1ae7;
+    padding: 10px;
+}
+.wraper .mo-and-year{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    color: #fff;
+}
+header .curent-date{
+    font-size: 23px;
+    font-weight: 500;
+}
+header span i{
+   background: #f2f2f2;
+   padding: 10px 13px;
+   margin: 0 2px;
+   border-radius: 50%;
+   cursor: pointer;
+   color: #333;
+}
+.calander{
+    padding: 20px;  
+}
+.calander ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.calander ul li{
+    width: calc(100% / 7);
+    color: #fff;
+}
+.calander .weeks li{
+    font-weight: 600;
+}
+.calander .dayes{
+    margin-bottom: 20px;
+}
+.calander .dayes li{
+    margin-top: 30px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+.dayes li:hover{
+    color: #333;
+}
+.dayes li.inactive{
+    color: #595959;
+}
+.dayes li.active{
+    color: #fff;
+}
+.calander .dayes li::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.calander .dayes li:hover::before{
+    background: #f2f2f2;
+}
+.calander .dayes li.active::before{
+    background: #009999;
+}
+.calander .dayes li.inactive:hover{
+    color: #bfbfbf;
+}
+
